@@ -7,7 +7,7 @@ function toggleTotal() {
         botao.innerHTML = 'Total a pagar';
     } else {
         linkTotal.setAttribute('disabled', '');
-        botao.innerHTML = 'R$ , ';
+        botao.innerHTML = 'R$ 101,83';
     }
 
 }
