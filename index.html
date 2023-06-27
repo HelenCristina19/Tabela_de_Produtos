@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.css" id="linkTotal">
     <title>Tabela de Produtos</title>
 
 </head>
@@ -61,16 +61,10 @@
 
         </tbody> 
 
-        <tfoot> <!--rodapé da tabela-->
-            <tr>
-                <td class="total1">Total a pagar</td>
-            </tr>
-        </tfoot>
-
     </table>
        
     <table>
-        <caption class="bebidas">Cadastro de Bebidas</caption>
+        <caption>Cadastro de Bebidas</caption>
 
     <thead>
         <tr>
@@ -116,11 +110,29 @@
         </tr>
     </tbody>
 
-    <tfoot> <!--rodapé da tabela-->
-        <tr>
-            <td class="total2">Total a Pagar</td>
-        </tr>
-    </tfoot>
+    </table>
+
+    <button type="button" id="botaoTotal">Total a Pagar</button>
+  
+    <script>
+        function toggleTotal() {
+            const link = document.querySelector('#linkTotal');
+            
+            if(link.hasAttribute('disabled')) {
+                link.removeAttribute('disabled');
+                botao.innerHTML = "Total a Pagar";
+                
+            } else {
+                link.setAttribute('disabled', '');
+                botao.innerHTML = "";
+            }
+        }
+
+        const botao = document.querySelector('#botaoTotal');
+        botao.addEventListener('click', toggleTotal);
+    </script>
+
+
     
 </body>
 </html>
