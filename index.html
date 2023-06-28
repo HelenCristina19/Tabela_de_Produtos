@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css" id="linkTotal">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Tabela de Produtos</title>
 
 </head>
@@ -112,24 +112,20 @@
 
     </table>
 
-    <button type="button" id="botaoTotal">Total a Pagar</button>
-  
     <script>
-        function toggleTotal() {
-            const link = document.querySelector('#linkTotal');
-            
-            if(link.hasAttribute('disabled')) {
-                link.removeAttribute('disabled');
-                botao.innerHTML = "Total a Pagar";
-                
-            } else {
-                link.setAttribute('disabled', '');
-                botao.innerHTML = 'R$ 101,83';
-        }
-    }
+       
+       function exibirMensagem() {
+        var mensagemElement = document.getElementById('mensagem');
+            mensagemElement.style.display = 'block';
+ }  
+</script>
 
-        const botao = document.querySelector('#botaoTotal');
-        botao.addEventListener('click', toggleTotal);
-    </script>
+<button onclick="exibirMensagem()">Total a Pagar</button>
+
+<div id="mensagem" class="mensagem">
+    <p>Você pagará R$ 101,83 .</p>
+</div>
+
+
 </body>
 </html>
